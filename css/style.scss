@@ -25,11 +25,7 @@ $blue: #419acf;
 $pc : "min-width: 550px";
 $sp : "max-width: 549px";
 
-html {
-    overflow: hidden;
-}
 body {
-    overflow: hidden;
     color: $font_color;
     @include fontsize(15);
     @media (#{$pc}) {

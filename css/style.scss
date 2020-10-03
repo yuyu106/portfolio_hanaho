@@ -6,11 +6,7 @@ font-size: $size + px;
 line-height: $size * 2.25 + px;
 
 font-size: ($size / 10) * 1rem;
-line-height: ($size / 10) * 2.1rem;
-
-@media (#{$pc}) {
-    line-height: ($size / 10) * 2.25rem;
-}
+line-height: ($size / 10) * 2.25rem;
 
 }
 

@@ -379,7 +379,7 @@ header {
 
     .sp_menu_toggle {
         position: absolute;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         top: -16px;
         right: 0;
@@ -479,23 +479,15 @@ header {
     text-align: center;
     h1 {
         overflow: hidden;
-        @include fontsize(24);
-        line-height: 24px;
+        @include fontsize(48);
+        line-height: 48px;
         text-transform: uppercase;
-        @media (#{$pc}) {
-            @include fontsize(48);
-            line-height: 48px;
-        }
         span {
             display: block;
-            @include fontsize(18);
-            line-height: 24px;
-            letter-spacing: 0.1px;
-            @media (#{$pc}) {
-                @include fontsize(36);
-                line-height: 48px;
-                letter-spacing: 0.2px;
-            }
+            @include fontsize(36);
+            line-height: 48px;
+            letter-spacing: 0.2px;
+            
         }
     }
 
@@ -504,14 +496,13 @@ header {
         text-align: center;
 
         .title_myname_inner {
-            width: 128px;
-            @media (#{$pc}) {
-                width: 280px;
-            }
+
+            width: 280px;
+
             padding: 8px;
-            @media (#{$pc}) {
-                padding: 8px 24px 8px 24px;
-            }
+
+            padding: 8px 24px 8px 24px;
+            
             display: inline-block;
             box-sizing: border-box;
             border: transparent 1px solid;
@@ -522,15 +513,15 @@ header {
     }
 
     .title_border_top{
-        right: 0; top:0%; animation: title-anim_top_sp 7s infinite;
+        right: 0; top:0%; animation: title-anim_top 7s infinite;
         background-color: $font_color;
         position: absolute;
         width:64px;
         height:1.2px;
-        @media (#{$pc}) {
+        
             animation: title-anim_top 7s infinite;
             width:120px; 
-        }
+        
                 
     }
     .title_border_left{
@@ -539,11 +530,11 @@ header {
         position: absolute;
         width:1.2px;
         height:32px;
-        @media (#{$pc}) {
+  
             animation: title-anim_left 7s infinite;
             top:-56px;
             height:56px;
-        }
+        
     }
 
     .title_border_bottom{
@@ -552,10 +543,10 @@ header {
         position: absolute;
         width:64px;
         height:1.2px;
-        @media (#{$pc}) {
+   
             animation: title-anim_bottom 7s infinite;
             width:120px; 
-        }
+        
     }
     
     .title_border_right{
@@ -564,11 +555,11 @@ header {
         position: absolute;
         width:1.2px;
         height:32px;
-        @media (#{$pc}) {
+   
             animation: title-anim_right 7s infinite;
             bottom:-56px;
             height:56px;
-        }
+    
     }
     
   

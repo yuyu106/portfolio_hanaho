@@ -94,3 +94,19 @@ $(function(){
         return false;
    })
 });
+
+$(function() {
+    $(".more p").hover(function(){
+      $(this).addClass("hover");
+    }, function(){
+      $(this).removeClass("hover");
+    });
+  });
+
+$(function() {
+  $(".work_more").hover(function(){
+    $(this).addClass("hover");
+  }, function(){
+    $(this).removeClass("hover");
+  });
+});

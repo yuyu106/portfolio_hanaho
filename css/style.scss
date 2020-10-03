@@ -6,7 +6,11 @@ font-size: $size + px;
 line-height: $size * 2.25 + px;
 
 font-size: ($size / 10) * 1rem;
-line-height: ($size / 10) * 2.25rem;
+line-height: ($size / 10) * 2.1rem;
+
+@media (#{$pc}) {
+    line-height: ($size / 10) * 2.25rem;
+}
 
 }
 
@@ -65,6 +69,10 @@ body {
   }
 a {
     text-decoration: none;
+    color: $font_color;
+}
+
+a:hover {
     color: $font_color;
 }
 p {
@@ -184,7 +192,7 @@ h3 {
   .rains span:nth-child(17){left:85%; top:-60%; animation: rain-anim 23s infinite;}
   .rains span:nth-child(18){left:90%; top:-70%; animation: rain-anim 24s infinite;}
   .rains span:nth-child(19){left:95%; top:-80%; animation: rain-anim 26s infinite;}
-  .rains span:nth-child(20){left:100%; top:-90%; animation: rain-anim9 28s infinite;}
+  .rains span:nth-child(20){left:100%; top:-90%; animation: rain-anim 28s infinite;}
   
   /*アニメーションキーフレーム
   一度落下したら次はキーフレーム1%の間に高さを戻して左右にずらして降らす*/
@@ -346,7 +354,7 @@ header {
             display: inline-block;
             @include fontsize($menu_font_size);
             margin: 0;
-            padding: 0;
+            padding: 4px;
             margin-left: 24px;
 
         }
@@ -424,6 +432,38 @@ header {
         display: none;
     }
 }
+
+.header_menu_pc_in {
+    position: relative;
+}
+
+.header_menu_pc_in::before {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    background: $font_color;
+    display: block;
+    -webkit-transform-origin: right top;
+    -ms-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: transform 0.56s cubic-bezier(1, 0, 0, 1.2);
+    transition: transform 0.56s cubic-bezier(0.9, 0.9, 0, 1)
+  }
+  
+  .header_menu_pc_in:hover::before {
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1)
+}
 /*-------------------------------------------------------------*/
 
 /* title ------------------------------------------------------*/
@@ -432,7 +472,7 @@ header {
     @include fontsize(48);
     height: 252px;
     @media (#{$pc}) {
-        margin-top: 160px;
+        margin-top: 120px;
     }
     @media (#{$sp}) {
         margin-top: 32px;
@@ -442,6 +482,7 @@ header {
     align-items: center;
     text-align: center;
     h1 {
+        overflow: hidden;
         @include fontsize(24);
         line-height: 24px;
         text-transform: uppercase;
@@ -461,8 +502,172 @@ header {
             }
         }
     }
-    
 
+    .title_myname {
+        width: 100%;
+        text-align: center;
+
+        .title_myname_inner {
+            width: 128px;
+            @media (#{$pc}) {
+                width: 280px;
+            }
+            padding: 8px;
+            @media (#{$pc}) {
+                padding: 8px 24px 8px 24px;
+            }
+            display: inline-block;
+            box-sizing: border-box;
+            border: transparent 1px solid;
+            position: relative;
+            //overflow: hidden;
+        }
+        
+    }
+
+    .title_border_top{
+        right: 0; top:0%; animation: title-anim_top_sp 7s infinite;
+        background-color: $font_color;
+        position: absolute;
+        width:64px;
+        height:1.2px;
+        @media (#{$pc}) {
+            animation: title-anim_top 7s infinite;
+            width:120px; 
+        }
+                
+    }
+    .title_border_left{
+        left:0%; top:-32px; animation: title-anim_left_sp 7s infinite;
+        background-color: $font_color;
+        position: absolute;
+        width:1.2px;
+        height:32px;
+        @media (#{$pc}) {
+            animation: title-anim_left 7s infinite;
+            top:-56px;
+            height:56px;
+        }
+    }
+
+    .title_border_bottom{
+        left: 0; bottom: 0; animation: title-anim_bottom_sp 7s infinite;
+        background-color: $font_color;
+        position: absolute;
+        width:64px;
+        height:1.2px;
+        @media (#{$pc}) {
+            animation: title-anim_bottom 7s infinite;
+            width:120px; 
+        }
+    }
+    
+    .title_border_right{
+        right:0; bottom:-32px; animation: title-anim_right_sp 7s infinite;
+        background-color: $font_color;
+        position: absolute;
+        width:1.2px;
+        height:32px;
+        @media (#{$pc}) {
+            animation: title-anim_right 7s infinite;
+            bottom:-56px;
+            height:56px;
+        }
+    }
+    
+  
+    @keyframes title-anim_top {   
+        0% { transform: translate(0px,0px);
+            opacity:0;}
+        2% { transform: translate(-120px,0px);
+            opacity:0;}
+        10% { transform: translate(-280px,0px);
+            opacity:1;}
+        100% { transform: translate(-280px,0px);
+            opacity:0;}
+    }
+    @keyframes title-anim_top_sp {  
+        0% { transform: translate(0px,0px);
+            opacity:0;}
+        2% { transform: translate(-56px,0px);
+            opacity:0;}
+        10% { transform: translate(-128px,0px);
+            opacity:1;}
+        100% { transform: translate(-128px,0px);
+            opacity:0;} 
+    }
+    @keyframes title-anim_left {  
+        0% { transform: translate(0px,0px);
+            opacity:0;}
+        10% { transform: translate(0px,0px);
+            opacity:1;}
+        17% { transform: translate(0px,96px);
+            opacity:0;}   
+        20% { transform: translate(0px,120px);
+            opacity:0;}
+        100% { transform: translate(0px,120px);
+            opacity:0;}
+    }
+    @keyframes title-anim_left_sp {  
+        0% { transform: translate(0px,0px);
+            opacity:0;}
+        10% { transform: translate(0px,0px);
+            opacity:1;}
+        17% { transform: translate(0px,48px);
+            opacity:0;}   
+        20% { transform: translate(0px,64px);
+            opacity:0;}
+        100% { transform: translate(0px,64px);
+            opacity:0;}
+    }
+    @keyframes title-anim_bottom {  
+        0% { transform: translate(0px,0px);
+            opacity:0;}
+        50% { transform: translate(0px,0px);
+            opacity:0;}
+        52% { transform: translate(120px,0px);
+            opacity:0;}
+        60% { transform: translate(280px,0px);
+            opacity:1;}
+        100% { transform: translate(280px,0px);
+            opacity:0;}
+    }
+    @keyframes title-anim_bottom_sp {  
+        0% { transform: translate(0px,0px);
+            opacity:0;}
+        50% { transform: translate(0px,0px);
+            opacity:0;}
+        52% { transform: translate(56px,0px);
+            opacity:0;}
+        60% { transform: translate(128px,0px);
+            opacity:1;}
+        100% { transform: translate(128px,0px);
+            opacity:0;}
+    }
+    @keyframes title-anim_right {  
+        0% { transform: translate(0px,0px);
+            opacity:0;}
+        60% { transform: translate(0px,0px);
+            opacity:1;}
+        67% { transform: translate(0px,-96px);
+            opacity:0;} 
+        70%  { transform: translate(0px,-120px);
+            opacity:0;} 
+        100% { transform: translate(0px,-120px);
+            opacity:0;}
+    }
+    @keyframes title-anim_right_sp {  
+        0% { transform: translate(0px,0px);
+            opacity:0;}
+        60% { transform: translate(0px,0px);
+            opacity:1;}
+        67% { transform: translate(0px,-48px);
+            opacity:0;} 
+        70%  { transform: translate(0px,-64px);
+            opacity:0;} 
+        100% { transform: translate(0px,-64px);
+            opacity:0;}
+    }
 }
 /*-------------------------------------------------------------*/
 
@@ -568,6 +773,7 @@ header {
             outline-color: #777;
             outline-offset: 0px;
             text-shadow: none;
+            cursor: pointer; 
             transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1);
 
             &:hover {
@@ -575,13 +781,24 @@ header {
                 box-shadow: inset 0 0 20px 
                 rgba(255, 255, 255, 0.1), 0 0 20px 
                 rgba(255, 255, 255, 0.05);
+                /*
                 outline-color: transparent;
                 outline-offset: 12px;
                 text-shadow: 2px 2px 3px $font_color;
                 cursor: pointer;
+                */
             }
         }
     }
+}
+.hover{
+    animation:  hover_anime 1.2s forwards;
+ }
+ @keyframes hover_anime{
+   100%{
+     outline-color: transparent;
+     outline-offset: 12px;
+   }
 }
 /*-------------------------------------------------------------*/
 
@@ -624,11 +841,16 @@ header {
         
         ul {
             list-style : none;
+            
             li {
                 display: inline-block;
                 padding: 8px 16px 8px 16px;
                 background-color: $blue;
                 color: #fff;
+                margin: 1px;
+                @media (#{$sp}) {
+                    margin-bottom: 4px;
+                }
             }
         }
     }
@@ -685,6 +907,89 @@ header {
 #illust {
     background-image: url(../images/tropical.jpeg);
     background-size: cover;
+    background-position: 0 16%;
+}
+
+#game {
+    background-image: url(../images/illust_top.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#photo {
+    background-image: url(../images/Photo_top.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.work_in {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    transition: backdrop-filter 0.6s, opacity 0.6s;;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    
+    backdrop-filter: blur(0px); 
+    background-color: rgba(255, 255, 255, 0.5);
+
+    p {
+        display: block;
+        width: 100%;
+        text-align: center;
+        @include fontsize($inner_title_size);
+        color: $font_color;
+        margin-bottom: 16px;
+    }
+}
+
+.title_more {
+    width: 100%;
+    text-align: center;
+}
+
+.work_more {
+    background: $font_color;
+    display: inline-block;
+    text-align: center;
+    width: 128px;
+    height: 40px;
+
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    outline: 1px solid;
+    outline-color: #777;
+    outline-offset: 0px;
+    text-shadow: none;
+    cursor: pointer; 
+    transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1);
+
+    &:hover {
+        border-color: #777;
+        box-shadow: inset 0 0 20px 
+        rgba(255, 255, 255, 0.1), 0 0 20px；
+        rgba(255, 255, 255, 0.05);
+        /*
+        outline-color: transparent;
+        outline-offset: 12px;
+        text-shadow: 2px 2px 3px $font_color;
+        cursor: pointer;
+        */
+    }
+    p {
+        text-align: center;
+        color: #fff;
+        @include fontsize($inner_title_size);
+    }
+
+}
+
+.work_in:hover {
+    backdrop-filter: blur(4px);   
+    opacity: 1;
 }
 
 /*-------------------------------------------------------------*/

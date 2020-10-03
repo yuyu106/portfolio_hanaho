@@ -373,6 +373,7 @@ header {
 }
 
 .sp_menu {
+    position: static;
     #sp_menu_buttun {
         position: relative;
         z-index: 200;
@@ -383,10 +384,10 @@ header {
 
     .sp_menu_toggle {
         position: absolute;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         top: -16px;
-        right: 0;
+        left: 0;
         z-index: 10;
         overflow: hidden;
         

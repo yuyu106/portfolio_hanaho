@@ -4,18 +4,12 @@ body {
   font-size: 15px;
   line-height: 33.75px;
   font-size: 1.5rem;
-  line-height: 3.15rem; }
-  @media (min-width: 550px) {
-    body {
-      line-height: 3.375rem; } }
+  line-height: 3.375rem; }
   @media (min-width: 550px) {
     body {
       font-size: 16px;
       line-height: 36px;
       font-size: 1.6rem;
-      line-height: 3.36rem; } }
-  @media (min-width: 550px) and (min-width: 550px) {
-    body {
       line-height: 3.6rem; } }
 
 body {
@@ -76,30 +70,21 @@ h2 {
   font-size: 32px;
   line-height: 72px;
   font-size: 3.2rem;
-  line-height: 6.72rem;
+  line-height: 7.2rem;
   margin: 0; }
-  @media (min-width: 550px) {
-    h2 {
-      line-height: 7.2rem; } }
   @media (max-width: 549px) {
     h2 {
       font-size: 24px;
       line-height: 54px;
       font-size: 2.4rem;
-      line-height: 5.04rem; } }
-  @media (max-width: 549px) and (min-width: 550px) {
-    h2 {
       line-height: 5.4rem; } }
 
 h3 {
   font-size: 20px;
   line-height: 45px;
   font-size: 2rem;
-  line-height: 4.2rem;
+  line-height: 4.5rem;
   margin: 0; }
-  @media (min-width: 550px) {
-    h3 {
-      line-height: 4.5rem; } }
 
 /* drop -------------------------------------------------------*/
 #drop_navi {
@@ -398,52 +383,36 @@ header {
   font-size: 20px;
   line-height: 45px;
   font-size: 2rem;
-  line-height: 4.2rem;
+  line-height: 4.5rem;
   font-size: 12px;
   line-height: 27px;
   font-size: 1.2rem;
-  line-height: 2.52rem;
+  line-height: 2.7rem;
   line-height: 12px;
   text-transform: uppercase; }
-  @media (min-width: 550px) {
-    .name-header {
-      line-height: 4.5rem; } }
-  @media (min-width: 550px) {
-    .name-header {
-      line-height: 2.7rem; } }
   @media (min-width: 550px) {
     .name-header {
       font-size: 24px;
       line-height: 54px;
       font-size: 2.4rem;
-      line-height: 5.04rem;
+      line-height: 5.4rem;
       line-height: 24px; } }
-  @media (min-width: 550px) and (min-width: 550px) {
-    .name-header {
-      line-height: 5.4rem; } }
-
   .name-header span {
     width: 100%;
     display: block;
     font-size: 9px;
     line-height: 20.25px;
     font-size: 0.9rem;
-    line-height: 1.89rem;
+    line-height: 2.025rem;
     line-height: 12px; }
-    @media (min-width: 550px) {
-      .name-header span {
-        line-height: 2.025rem; } }
     @media (min-width: 550px) {
       .name-header span {
         font-size: 18px;
         line-height: 40.5px;
         font-size: 1.8rem;
-        line-height: 3.78rem;
+        line-height: 4.05rem;
         line-height: 24px;
         letter-spacing: 0.1px; } }
-  @media (min-width: 550px) and (min-width: 550px) {
-    .name-header span {
-      line-height: 4.05rem; } }
 
 .header_menu_pc {
   text-align: right;
@@ -452,9 +421,6 @@ header {
   font-size: 0rem;
   line-height: 0rem;
   padding-top: 22px; }
-  @media (min-width: 550px) {
-    .header_menu_pc {
-      line-height: 0rem; } }
   .header_menu_pc ul {
     list-style: none; }
     .header_menu_pc ul li {
@@ -462,22 +428,16 @@ header {
       font-size: 20px;
       line-height: 45px;
       font-size: 2rem;
-      line-height: 4.2rem;
+      line-height: 4.5rem;
       margin: 0;
       padding: 4px;
       margin-left: 24px; }
-      @media (min-width: 550px) {
-        .header_menu_pc ul li {
-          line-height: 4.5rem; } }
   .header_menu_pc p {
     font-size: 20px;
     line-height: 45px;
     font-size: 2rem;
-    line-height: 4.2rem;
+    line-height: 4.5rem;
     line-height: 26px; }
-    @media (min-width: 550px) {
-      .header_menu_pc p {
-        line-height: 4.5rem; } }
     .header_menu_pc p span {
       font-size: 16px;
       padding: 0 4px; }
@@ -567,13 +527,10 @@ header {
   font-size: 48px;
   line-height: 108px;
   font-size: 4.8rem;
-  line-height: 10.08rem;
+  line-height: 10.8rem;
   height: 252px;
   align-items: center;
   text-align: center; }
-  @media (min-width: 550px) {
-    .title {
-      line-height: 10.8rem; } }
   @media (min-width: 550px) {
     .title {
       margin-top: 120px; } }
@@ -586,46 +543,32 @@ header {
     font-size: 24px;
     line-height: 54px;
     font-size: 2.4rem;
-    line-height: 5.04rem;
+    line-height: 5.4rem;
     line-height: 24px;
     text-transform: uppercase; }
-    @media (min-width: 550px) {
-      .title h1 {
-        line-height: 5.4rem; } }
     @media (min-width: 550px) {
       .title h1 {
         font-size: 48px;
         line-height: 108px;
         font-size: 4.8rem;
-        line-height: 10.08rem;
+        line-height: 10.8rem;
         line-height: 48px; } }
-  @media (min-width: 550px) and (min-width: 550px) {
-    .title h1 {
-      line-height: 10.8rem; } }
-
     .title h1 span {
       display: block;
       font-size: 18px;
       line-height: 40.5px;
       font-size: 1.8rem;
-      line-height: 3.78rem;
+      line-height: 4.05rem;
       line-height: 24px;
       letter-spacing: 0.1px; }
-      @media (min-width: 550px) {
-        .title h1 span {
-          line-height: 4.05rem; } }
       @media (min-width: 550px) {
         .title h1 span {
           font-size: 36px;
           line-height: 81px;
           font-size: 3.6rem;
-          line-height: 7.56rem;
+          line-height: 8.1rem;
           line-height: 48px;
           letter-spacing: 0.2px; } }
-  @media (min-width: 550px) and (min-width: 550px) {
-    .title h1 span {
-      line-height: 8.1rem; } }
-
   .title .title_myname {
     width: 100%;
     text-align: center; }
@@ -892,7 +835,7 @@ header {
       font-size: 20px;
       line-height: 45px;
       font-size: 2rem;
-      line-height: 4.2rem;
+      line-height: 4.5rem;
       text-align: center;
       box-sizing: border-box;
       border: 1px solid transparent;
@@ -902,9 +845,6 @@ header {
       text-shadow: none;
       cursor: pointer;
       transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1); }
-      @media (min-width: 550px) {
-        .about .more p {
-          line-height: 4.5rem; } }
       .about .more p:hover {
         border-color: #777;
         box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.05);
@@ -1040,12 +980,9 @@ header {
     font-size: 20px;
     line-height: 45px;
     font-size: 2rem;
-    line-height: 4.2rem;
+    line-height: 4.5rem;
     color: #444;
     margin-bottom: 16px; }
-    @media (min-width: 550px) {
-      .work_in p {
-        line-height: 4.5rem; } }
 
 .title_more {
   width: 100%;
@@ -1080,10 +1017,7 @@ header {
     font-size: 20px;
     line-height: 45px;
     font-size: 2rem;
-    line-height: 4.2rem; }
-    @media (min-width: 550px) {
-      .work_more p {
-        line-height: 4.5rem; } }
+    line-height: 4.5rem; }
 
 .work_in:hover {
   backdrop-filter: blur(4px);
@@ -1114,18 +1048,12 @@ header {
       font-size: 50px;
       line-height: 112.5px;
       font-size: 5rem;
-      line-height: 10.5rem; }
-      @media (min-width: 550px) {
-        .contact .contact_icon .github {
-          line-height: 11.25rem; } }
+      line-height: 11.25rem; }
     .contact .contact_icon .mail {
       font-size: 42.66667px;
       line-height: 96px;
       font-size: 4.26667rem;
-      line-height: 8.96rem; }
-      @media (min-width: 550px) {
-        .contact .contact_icon .mail {
-          line-height: 9.6rem; } }
+      line-height: 9.6rem; }
 
 /*-------------------------------------------------------------*/
 /* fotter -----------------------------------------------------*/
@@ -1140,10 +1068,7 @@ footer {
     font-size: 16px;
     line-height: 36px;
     font-size: 1.6rem;
-    line-height: 3.36rem; }
-    @media (min-width: 550px) {
-      footer .container p {
-        line-height: 3.6rem; } }
+    line-height: 3.6rem; }
 
 /*-------------------------------------------------------------*/
 /* about.html -------------------------------------------------*/
@@ -1194,21 +1119,14 @@ footer {
       font-size: 15px;
       line-height: 33.75px;
       font-size: 1.5rem;
-      line-height: 3.15rem;
+      line-height: 3.375rem;
       vertical-align: middle; }
-      @media (min-width: 550px) {
-        .career ul li p {
-          line-height: 3.375rem; } }
       @media (min-width: 550px) {
         .career ul li p {
           font-size: 20px;
           line-height: 45px;
           font-size: 2rem;
-          line-height: 4.2rem; } }
-  @media (min-width: 550px) and (min-width: 550px) {
-    .career ul li p {
-      line-height: 4.5rem; } }
-
+          line-height: 4.5rem; } }
     .career ul .career_detail {
       display: inline-block;
       width: 100%; }
@@ -1256,10 +1174,7 @@ footer {
     font-size: 20px;
     line-height: 45px;
     font-size: 2rem;
-    line-height: 4.2rem; }
-    @media (min-width: 550px) {
-      .works_menu ul {
-        line-height: 4.5rem; } }
+    line-height: 4.5rem; }
 
 .work {
   margin-bottom: 24px; }
@@ -1267,11 +1182,8 @@ footer {
     font-size: 20px;
     line-height: 45px;
     font-size: 2rem;
-    line-height: 4.2rem;
+    line-height: 4.5rem;
     margin-bottom: 0; }
-    @media (min-width: 550px) {
-      .work h4 {
-        line-height: 4.5rem; } }
   .work .selected {
     background: yellow; }
   .work .selected_wrappar {
@@ -1334,9 +1246,6 @@ footer {
       font-size: 16px;
       line-height: 36px;
       font-size: 1.6rem;
-      line-height: 3.36rem; } }
-  @media (min-width: 550px) and (min-width: 550px) {
-    #description {
       line-height: 3.6rem; } }
 
 .description {

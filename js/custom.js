@@ -36,10 +36,10 @@ $(function(){
 
   $(window).load(function(){
     $(".works_select").click(function(){
-      var background = $(this).css("background");
+      var background = $(this).css("background-image");
       var text = $(this).children(".description").text();
-      $("#web").css('background',background);
-      $("#description").text(text);
+      $(this).parents(".work").find(".selected").css('background-image',background);
+      $(this).parents(".work").find(".selected_description").text(text);
     });
   });
 
@@ -110,3 +110,54 @@ $(function() {
     $(this).removeClass("hover");
   });
 });
+
+
+$(document).ready(function(){
+    $("#hobby").owlCarousel(
+        {
+            items: 2,
+            responsive : {　//レスポンシブ対応
+                // ブレイクポイント 550以上
+                960 : {
+                    items : 5,
+                }
+            },
+
+            //loop: true,
+            center: true,
+            touchDrag: true,
+            startPosition: 2,
+            nav: false,
+            dots: false
+      });
+
+      //$("#hobby_li3").parent().addClass("center");
+});
+
+
+$(function() {
+    $("#hobby li").click(function(){
+        $(".owl-item").removeClass("center");
+        var width = $(this).parents(".owl-stage").css("width").match(/\d/g).join("");
+        var num = $(this).attr('id').match(/\d/g).join("");
+        var start;
+        var distance;
+        if (window.matchMedia( '(min-width: 960px)' ).matches) {
+            distance = ( width / 5) * (3 - num);
+            console.log(width, num);
+            console.log(distance);
+        }
+        else {
+            start = width/10;
+            distance = start - (( width / 5) * (num - 1));
+            console.log(start);
+            console.log(distance);
+        }
+        
+      $(this).parents(".owl-stage").css("transform", "translate3d(" + distance + "px, 0px, 0px");
+
+      
+      //class付与
+      $(this).parents(".owl-item").addClass("center");
+    });
+  });

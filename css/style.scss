@@ -450,7 +450,7 @@ header {
     -ms-transform: scale(0, 1);
     transform: scale(0, 1);
     -webkit-transition: transform 0.56s cubic-bezier(1, 0, 0, 1.2);
-    transition: transform 0.56s cubic-bezier(0.9, 0.9, 0, 1)
+    transition: transform 0.56s cubic-bezier(0.9, 0.9, 0, 1);
   }
   
   .header_menu_pc_in:hover::before {
@@ -888,6 +888,7 @@ header {
     }
 }
 
+
 #web {
     background-image: url(../images/web_shopping.png);
     background-size: cover;
@@ -1018,9 +1019,9 @@ header {
 
 /* fotter -----------------------------------------------------*/
 footer {
-    margin-top: 40px;
+    margin-top: 80px;
     @media (#{$pc}) {
-        margin-top: 80px;
+        margin-top: 160px;
     }
     .container {
         p {
@@ -1063,22 +1064,21 @@ footer {
     .row {
         margin-top: 8px;
         @media (#{$pc}) {
-            margin-top: 24px;
+            margin-top: 32px;
+        }
+        .two {
+            height: 1px;
         }
     }
 
     ul {
         list-style: none;
         text-align: left;
-        li {
-            //@media (#{$pc}) {
-                display: flex;
-            //}
-            
-            width: 100%;
+
+        li { 
             font-size: 0;
             line-height: 0;
-
+            text-align: center;
             margin-bottom: 16px;
             @media (#{$pc}) {
                 margin-bottom: 32px;
@@ -1089,21 +1089,24 @@ footer {
             @media (#{$sp}) {
                 display: block;
             }
-            width: 20%;
+            @include fontsize($inner_title_size);
+            width: 90%;
+            
         }
         li p {
             @include fontsize(15);
             @media (#{$pc}) {
-                @include fontsize($inner_title_size);
+                @include fontsize(16);
             }
             vertical-align: middle;
         }
         .career_detail {
             display: inline-block;
-            width: 100%;
-            @media (#{$pc}) {
-                width: 80%;
+            width: 90%;
+            a {
+                text-decoration: underline;
             }
+            
         }
     }
 }
@@ -1117,10 +1120,11 @@ footer {
 
     .hobby_list {
         list-style: none;
+        margin-top: 8px;
         li {
             display: inline-block;
             text-align: center;
-            width: 15%;
+            width: 100%;
             div {
                 display: inline-block;
                 width: 100px;
@@ -1129,44 +1133,109 @@ footer {
                 background-color: orange;
             }
             p {
-                display: inline-block;
+                display: none;
                 width: 100%;
                 text-align: center;
+                @include fontsize($inner_title_size);
+                line-height: 24px;
+            }
+        }
+
+        .owl-stage {
+            display: flex;
+            align-items: center;
+            transform: 0;
+            transition: transform 0.4s; 
+        }
+        .center {
+            li div {
+                width: 160px;
+                height: 160px;
+                @media (#{$pc}) {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+            p {
+                display: inline-block;
             }
         }
         
-    }
+    }  
+}
+
+#hobby_li1 div {
+    background-image: url(../images/live.jpg);
+    background-size: cover;
+    background-position: left;
+}
+#hobby_li2 div {
+    background-image: url(../images/bump.jpg);
+    background-size: cover;
+    background-position: left;
+}
+#hobby_li3 div {
+    background-image: url(../images/disney.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#hobby_li4 div {
+    background-image: url(../images/camera.jpg);
+    background-size: cover;
+    background-position: left;
+}
+#hobby_li5 div {
+    background-image: url(../images/english.jpg);
+    background-size: cover;
+    background-position: left;
 }
 
 /*-------------------------------------------------------------*/
 
 /* works.html -------------------------------------------------*/
 .title_works {
-    margin-top: 96px;
-    margin-bottom: 96px;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    @media (#{$pc}) {
+        margin-top: 96px;
+        margin-bottom: 96px;
+    }
     text-align: center;
 }
 
 .works_menu {
     width: 100%;
-    height: 200px;
+    margin-bottom: 16px;
+    @media (#{$pc}) {
+        height: 200px;
+    }
+    
     ul {
         display: block;
         width: 100%;
-        //position: fixed;
         list-style: none;
         @include fontsize($inner_title_size);
+        @media (#{$sp}) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+#work_menu_all {
+    @media (#{$sp}) {
+        display: none;
     }
 }
 
 .work {
     margin-bottom: 24px;
+    
     h4 {
         @include fontsize($inner_title_size);
         margin-bottom: 0;
-    }
-    .selected {
-        background: yellow;
+        @media (#{$sp}) {
+            text-align: center;
+        }
     }
     .selected_wrappar {
         position: relative; 
@@ -1195,12 +1264,11 @@ footer {
 
     .works_select_wrappar {
         position: relative; 
-        width: 100%;
         display: inline-block;
-        @media (#{$pc}) {
-            width: 23%;
-            margin-right: 2%;
-        }
+
+        width: 23%;
+        margin-right: 2%;
+
             &:before {
                 content: "";
                 display: inline-block;
@@ -1228,7 +1296,7 @@ footer {
     }
 }
 
-#description {
+.selected_description {
     display: inline-block;
     @media (#{$pc}) {
         width: 48%;
@@ -1243,6 +1311,92 @@ footer {
     display: none;
 }
 
-#portfolio {
-    background: blue;
+.work {
+
+#web1 {
+    background-image: url(../images/web_shopping.png);
+    background-size: cover;
+}
+
+#web2 {
+    background-image: url(../images/TOT.jpg);
+    background-size: cover;
+}
+
+#illust1 {
+    background-image: url(../images/tropical.jpeg);
+    background-size: cover;
+}
+
+#illust2 {
+    background-image: url(../images/wan.jpeg);
+    background-size: cover;
+}
+
+#illust3 {
+    background-image: url(../images/nyan.png);
+    background-size: cover;
+}
+
+#illust4 {
+    background-image: url(../images/usa.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#game1 {
+    background-image: url(../images/title.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#game2 {
+    background-image: url(../images/jihad.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#game3 {
+    background-image: url(../images/block.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#game4 {
+    background-image: url(../images/triple.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#photo1 {
+    background-image: url(../images/Photo_top.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#photo2 {
+    background-image: url(../images/hapi.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#photo3 {
+    background-image: url(../images/flower.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#photo4 {
+    background-image: url(../images/summer.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+#illust, #game, #photo {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 }

@@ -1032,10 +1032,10 @@ header {
 /*-------------------------------------------------------------*/
 /* fotter -----------------------------------------------------*/
 footer {
-  margin-top: 40px; }
+  margin-top: 80px; }
   @media (min-width: 550px) {
     footer {
-      margin-top: 80px; } }
+      margin-top: 160px; } }
   footer .container p {
     display: block;
     text-align: center;
@@ -1070,22 +1070,27 @@ footer {
     margin-top: 8px; }
     @media (min-width: 550px) {
       .career .row {
-        margin-top: 24px; } }
+        margin-top: 32px; } }
+    .career .row .two {
+      height: 1px; }
   .career ul {
     list-style: none;
     text-align: left; }
     .career ul li {
-      display: flex;
-      width: 100%;
       font-size: 0;
       line-height: 0;
+      text-align: center;
       margin-bottom: 16px; }
       @media (min-width: 550px) {
         .career ul li {
           margin-bottom: 32px; } }
     .career ul .career_year {
       display: inline-block;
-      width: 20%; }
+      font-size: 20px;
+      line-height: 45px;
+      font-size: 2rem;
+      line-height: 4.5rem;
+      width: 90%; }
       @media (max-width: 549px) {
         .career ul .career_year {
           display: block; } }
@@ -1097,16 +1102,15 @@ footer {
       vertical-align: middle; }
       @media (min-width: 550px) {
         .career ul li p {
-          font-size: 20px;
-          line-height: 45px;
-          font-size: 2rem;
-          line-height: 4.5rem; } }
+          font-size: 16px;
+          line-height: 36px;
+          font-size: 1.6rem;
+          line-height: 3.6rem; } }
     .career ul .career_detail {
       display: inline-block;
-      width: 100%; }
-      @media (min-width: 550px) {
-        .career ul .career_detail {
-          width: 80%; } }
+      width: 90%; }
+      .career ul .career_detail a {
+        text-decoration: underline; }
 
 .hobbys {
   text-align: center;
@@ -1115,11 +1119,12 @@ footer {
     .hobbys {
       margin-top: 160px; } }
   .hobbys .hobby_list {
-    list-style: none; }
+    list-style: none;
+    margin-top: 8px; }
     .hobbys .hobby_list li {
       display: inline-block;
       text-align: center;
-      width: 15%; }
+      width: 100%; }
       .hobbys .hobby_list li div {
         display: inline-block;
         width: 100px;
@@ -1127,20 +1132,71 @@ footer {
         border-radius: 50%;
         background-color: orange; }
       .hobbys .hobby_list li p {
-        display: inline-block;
+        display: none;
         width: 100%;
-        text-align: center; }
+        text-align: center;
+        font-size: 20px;
+        line-height: 45px;
+        font-size: 2rem;
+        line-height: 4.5rem;
+        line-height: 24px; }
+    .hobbys .hobby_list .owl-stage {
+      display: flex;
+      align-items: center;
+      transform: 0;
+      transition: transform 0.4s; }
+    .hobbys .hobby_list .center li div {
+      width: 160px;
+      height: 160px; }
+      @media (min-width: 550px) {
+        .hobbys .hobby_list .center li div {
+          width: 200px;
+          height: 200px; } }
+    .hobbys .hobby_list .center p {
+      display: inline-block; }
+
+#hobby_li1 div {
+  background-image: url(../images/live.jpg);
+  background-size: cover;
+  background-position: left; }
+
+#hobby_li2 div {
+  background-image: url(../images/bump.jpg);
+  background-size: cover;
+  background-position: left; }
+
+#hobby_li3 div {
+  background-image: url(../images/disney.jpg);
+  background-size: cover;
+  background-position: center; }
+
+#hobby_li4 div {
+  background-image: url(../images/camera.jpg);
+  background-size: cover;
+  background-position: left; }
+
+#hobby_li5 div {
+  background-image: url(../images/english.jpg);
+  background-size: cover;
+  background-position: left; }
 
 /*-------------------------------------------------------------*/
 /* works.html -------------------------------------------------*/
 .title_works {
-  margin-top: 96px;
-  margin-bottom: 96px;
+  margin-top: 48px;
+  margin-bottom: 48px;
   text-align: center; }
+  @media (min-width: 550px) {
+    .title_works {
+      margin-top: 96px;
+      margin-bottom: 96px; } }
 
 .works_menu {
   width: 100%;
-  height: 200px; }
+  margin-bottom: 16px; }
+  @media (min-width: 550px) {
+    .works_menu {
+      height: 200px; } }
   .works_menu ul {
     display: block;
     width: 100%;
@@ -1149,6 +1205,14 @@ footer {
     line-height: 45px;
     font-size: 2rem;
     line-height: 4.5rem; }
+    @media (max-width: 549px) {
+      .works_menu ul {
+        display: flex;
+        justify-content: space-between; } }
+
+@media (max-width: 549px) {
+  #work_menu_all {
+    display: none; } }
 
 .work {
   margin-bottom: 24px; }
@@ -1158,8 +1222,9 @@ footer {
     font-size: 2rem;
     line-height: 4.5rem;
     margin-bottom: 0; }
-  .work .selected {
-    background: yellow; }
+    @media (max-width: 549px) {
+      .work h4 {
+        text-align: center; } }
   .work .selected_wrappar {
     position: relative;
     width: 100%;
@@ -1183,12 +1248,9 @@ footer {
       background-size: cover; }
   .work .works_select_wrappar {
     position: relative;
-    width: 100%;
-    display: inline-block; }
-    @media (min-width: 550px) {
-      .work .works_select_wrappar {
-        width: 23%;
-        margin-right: 2%; } }
+    display: inline-block;
+    width: 23%;
+    margin-right: 2%; }
     .work .works_select_wrappar:before {
       content: "";
       display: inline-block;
@@ -1209,10 +1271,10 @@ footer {
     width: 100%;
     position: relative; }
 
-#description {
+.selected_description {
   display: inline-block; }
   @media (min-width: 550px) {
-    #description {
+    .selected_description {
       width: 48%;
       position: absolute;
       top: 0;
@@ -1225,7 +1287,60 @@ footer {
 .description {
   display: none; }
 
-#portfolio {
-  background: blue; }
+.work #web1 {
+  background-image: url(../images/web_shopping.png);
+  background-size: cover; }
+.work #web2 {
+  background-image: url(../images/TOT.jpg);
+  background-size: cover; }
+.work #illust1 {
+  background-image: url(../images/tropical.jpeg);
+  background-size: cover; }
+.work #illust2 {
+  background-image: url(../images/wan.jpeg);
+  background-size: cover; }
+.work #illust3 {
+  background-image: url(../images/nyan.png);
+  background-size: cover; }
+.work #illust4 {
+  background-image: url(../images/usa.png);
+  background-size: cover;
+  background-position: center; }
+.work #game1 {
+  background-image: url(../images/title.png);
+  background-size: cover;
+  background-position: center; }
+.work #game2 {
+  background-image: url(../images/jihad.jpg);
+  background-size: cover;
+  background-position: center; }
+.work #game3 {
+  background-image: url(../images/block.jpg);
+  background-size: cover;
+  background-position: center; }
+.work #game4 {
+  background-image: url(../images/triple.jpg);
+  background-size: cover;
+  background-position: center; }
+.work #photo1 {
+  background-image: url(../images/Photo_top.jpg);
+  background-size: cover;
+  background-position: center; }
+.work #photo2 {
+  background-image: url(../images/hapi.jpg);
+  background-size: cover;
+  background-position: center; }
+.work #photo3 {
+  background-image: url(../images/flower.jpg);
+  background-size: cover;
+  background-position: center; }
+.work #photo4 {
+  background-image: url(../images/summer.jpeg);
+  background-size: cover;
+  background-position: center; }
+.work #illust, .work #game, .work #photo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 /*# sourceMappingURL=style.css.map */

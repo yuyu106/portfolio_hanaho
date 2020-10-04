@@ -107,7 +107,7 @@
           <div class="three columns">
                 <div class="works_menu">
                     <ul>
-                        <li class="limelight"><a href="#works">All</a></li>
+                        <li class="limelight" id="work_menu_all"><a href="#works">All</a></li>
                         <li class="limelight"><a  href="#works_web">Web</a></li>
                         <li class="limelight"><a href="#works_illust">Illust</a></li>
                         <li class="limelight"><a href="#works_game">Game</a></li>
@@ -120,18 +120,18 @@
                 <h4 class="limelight">Web</h4>
                 <div class="selects">
                     <div class="selected_wrappar">
-                        <div class="selected" id="web">web</div>
+                        <div class="selected" id="web"></div>
                     </div>
-                    <div id="description">作品説明</div>
+                    <div class="selected_description">作品説明</div>
                 </div>
                 <div class="works_select_wrappar">
-                    <div class="works_select" id="portfolio">1
+                    <div class="works_select" id="web1">
                         <div class="description">1だよ〜〜〜〜〜</div>
                     </div>
                     
                 </div><!--
                 --><div class="works_select_wrappar">
-                    <div class="works_select">1
+                    <div class="works_select" id="web2">
                         <div class="description">2だよ〜〜〜〜〜</div>
                     </div>
                     
@@ -151,27 +151,102 @@
             </div>
             <div class="work" id="works_illust">
                 <h4 class="limelight">Illust</h4>
-                <div class="selected_wrappar"><div class="selected">Illust</div></div>
-                <div class="works_select_wrappar"><div class="works_select">1</div></div><!--
-                --><div class="works_select_wrappar"><div class="works_select">1</div></div><!--
-                 --><div class="works_select_wrappar"><div class="works_select">1</div></div><!--
-                 --><div class="works_select_wrappar works_last"><div class="works_select">1</div></div>
+                <div class="selects">
+                    <div class="selected_wrappar">
+                        <div class="selected" id="illust"></div>
+                    </div>
+                    <div class="selected_description">作品説明</div>
+                </div>
+                <div class="works_select_wrappar">
+                    <div class="works_select" id="illust1">
+                        <div class="description">トロスプ</div>
+                    </div>
+                    
+                </div><!--
+                --><div class="works_select_wrappar">
+                    <div class="works_select" id="illust2">
+                        <div class="description">わん</div>
+                    </div>
+                    
+                </div><!--
+                 --><div class="works_select_wrappar">
+                    <div class="works_select" id="illust3">
+                        <div class="description">にゃん</div>
+                    </div>
+                    
+                </div><!--
+                 --><div class="works_select_wrappar">
+                    <div class="works_select" id="illust4">
+                        <div class="description">うさぎ</div>
+                    </div>
+                    
+                </div>
             </div>
             <div class="work" id ="works_game">
                 <h4 class="limelight">game</h4>
-                <div class="selected_wrappar"><div class="selected">game</div></div>
-                <div class="works_select_wrappar"><div class="works_select">1</div></div><!--
-                --><div class="works_select_wrappar"><div class="works_select">1</div></div><!--
-                 --><div class="works_select_wrappar"><div class="works_select">1</div></div><!--
-                 --><div class="works_select_wrappar works_last"><div class="works_select">1</div></div>
+                <div class="selects">
+                    <div class="selected_wrappar">
+                        <div class="selected" id="game"></div>
+                    </div>
+                    <div class="selected_description">作品説明</div>
+                </div>
+                <div class="works_select_wrappar">
+                    <div class="works_select" id="game1">
+                        <div class="description">トロスプ</div>
+                    </div>
+                    
+                </div><!--
+                --><div class="works_select_wrappar">
+                    <div class="works_select" id="game2">
+                        <div class="description">わん</div>
+                    </div>
+                    
+                </div><!--
+                 --><div class="works_select_wrappar">
+                    <div class="works_select" id="game3">
+                        <div class="description">にゃん</div>
+                    </div>
+                    
+                </div><!--
+                 --><div class="works_select_wrappar">
+                    <div class="works_select" id="game4">
+                        <div class="description">うさぎ</div>
+                    </div>
+                    
+                </div>
             </div>
             <div class="work" id="works_photo">
                 <h4 class="limelight">Photo</h4>
-                <div class="selected_wrappar"><div class="selected">Photo</div></div>
-                <div class="works_select_wrappar"><div class="works_select">1</div></div><!--
-                --><div class="works_select_wrappar"><div class="works_select">1</div></div><!--
-                 --><div class="works_select_wrappar"><div class="works_select">1</div></div><!--
-                 --><div class="works_select_wrappar works_last"><div class="works_select">1</div></div>
+                <div class="selects">
+                    <div class="selected_wrappar">
+                        <div class="selected" id="photo"></div>
+                    </div>
+                    <div class="selected_description">作品説明</div>
+                </div>
+                <div class="works_select_wrappar">
+                    <div class="works_select" id="photo1">
+                        <div class="description">トロスプ</div>
+                    </div>
+                    
+                </div><!--
+                --><div class="works_select_wrappar">
+                    <div class="works_select" id="photo2">
+                        <div class="description">わん</div>
+                    </div>
+                    
+                </div><!--
+                 --><div class="works_select_wrappar">
+                    <div class="works_select" id="photo3">
+                        <div class="description">にゃん</div>
+                    </div>
+                    
+                </div><!--
+                 --><div class="works_select_wrappar">
+                    <div class="works_select" id="photo4">
+                        <div class="description">うさぎ</div>
+                    </div>
+                    
+                </div>
             </div>
           </div>
         </div>

@@ -452,7 +452,7 @@ header {
     z-index: 200;
     width: 40px;
     height: 40px;
-    background-color: lightseagreen; }
+    background-color: #444; }
   .sp_menu .sp_menu_toggle {
     position: absolute;
     width: 100vw;
@@ -475,12 +475,12 @@ header {
         padding: 0;
         font-size: 0;
         line-height: 0;
-        width: 20%;
+        width: 14.28%;
         height: 100%;
         position: relative; }
       .sp_menu .sp_menu_toggle .sp_menu_back .back {
         display: none;
-        background-color: lightslategrey;
+        background-color: #419acf;
         width: 100%;
         position: absolute;
         top: 0;
@@ -488,7 +488,42 @@ header {
       .sp_menu .sp_menu_toggle .sp_menu_back .back1 {
         display: block; }
     .sp_menu .sp_menu_toggle ul {
-      list-style: none; }
+      list-style: none;
+      display: block; }
+      .sp_menu .sp_menu_toggle ul p {
+        text-align: center;
+        font-size: 20px;
+        line-height: 45px;
+        font-size: 2rem;
+        line-height: 4.5rem; }
+    .sp_menu .sp_menu_toggle .sp_menu_inner {
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      display: none; }
+    .sp_menu .sp_menu_toggle .sp_contact_icon {
+      margin: 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center; }
+      .sp_menu .sp_menu_toggle .sp_contact_icon li {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 16px 0 16px; }
+      .sp_menu .sp_menu_toggle .sp_contact_icon .github {
+        font-size: 46px;
+        line-height: 103.5px;
+        font-size: 4.6rem;
+        line-height: 10.35rem;
+        line-height: 8rem; }
+      .sp_menu .sp_menu_toggle .sp_contact_icon .mail {
+        font-size: 40px;
+        line-height: 90px;
+        font-size: 4rem;
+        line-height: 9rem;
+        line-height: 8rem; }
   @media (min-width: 550px) {
     .sp_menu {
       display: none; } }
@@ -1142,9 +1177,7 @@ footer {
         line-height: 24px; }
     .hobbys .hobby_list .owl-stage {
       display: flex;
-      align-items: center;
-      transform: 0;
-      transition: transform 0.4s; }
+      align-items: center; }
     .hobbys .hobby_list .center li div {
       width: 160px;
       height: 160px; }

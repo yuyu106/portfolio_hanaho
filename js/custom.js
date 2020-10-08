@@ -6,10 +6,16 @@ $(function(){
       if(state == false) {
         state = true;
         $(".sp_menu_toggle").slideToggle();
-        $(".back2").delay(50).slideToggle();
-        $(".back3").delay(90).slideToggle();
-        $(".back4").delay(115).slideToggle();
-        $(".back5").delay(155).slideToggle("normal", ()=> {
+        $(".back2").delay(20).slideToggle();
+        $(".back3").delay(40).slideToggle();
+        $(".back4").delay(60).slideToggle()
+        $(".sp_menu_inner").delay(60).slideToggle('normal', function() {
+            if ($(this).is(':visible'))
+                $(this).css('display','flex');
+        });        
+        $(".back5").delay(80).slideToggle();
+        $(".back6").delay(100).slideToggle();
+        $(".back7").delay(120).slideToggle("normal", ()=> {
             scrollpos = $(window).scrollTop();
             $('body').addClass('fixed');
             $('.sp_menu_toggle').addClass('open');
@@ -18,11 +24,17 @@ $(function(){
         
       } else {
         state = false;
-        $(".back5").slideToggle();
-        $(".back4").delay(50).slideToggle();
-        $(".back3").delay(90).slideToggle();
-        $(".back2").delay(115).slideToggle();
-        $(".sp_menu_toggle").delay(155).slideToggle();
+        $(".back7").slideToggle();
+        $(".back6").delay(20).slideToggle();
+        $(".back5").delay(40).slideToggle();
+        $(".back4").delay(60).slideToggle();
+        $(".sp_menu_inner").delay(60).slideToggle('normal', function() {
+            if ($(this).is(':visible'))
+                $(this).css('display','flex');
+        }); 
+        $(".back3").delay(80).slideToggle();
+        $(".back2").delay(100).slideToggle();
+        $(".sp_menu_toggle").delay(120).slideToggle();
         $('body').removeClass('fixed');
         window.scrollTo( 0 , scrollpos );
         $('.sp_menu_toggle').removeClass('open');
@@ -130,7 +142,7 @@ $(document).ready(function(){
             nav: false,
             dots: false
       });
-
+      $(".owl-stage").css("transition" , "all 0.25s ease 0s");
       //$("#hobby_li3").parent().addClass("center");
 });
 

@@ -375,7 +375,7 @@ header {
         z-index: 200;
         width: 40px;
         height: 40px;
-        background-color: lightseagreen;
+        background-color: #444;
     }
 
     .sp_menu_toggle {
@@ -403,14 +403,14 @@ header {
                 padding: 0;
                 font-size: 0;
                 line-height: 0;
-                width: 20%;
+                width: 14.28%;
                 height: 100%;
                 position: relative;
                               
             }   
             .back {
                 display: none;
-                background-color: lightslategrey;  
+                background-color: $blue; 
                 width: 100%;
                 position: absolute;
                 top: 0;
@@ -423,6 +423,41 @@ header {
 
         ul {
             list-style: none;
+            display: block;
+            p {
+                text-align: center;
+                @include fontsize($menu_font_size);
+            }
+        }
+
+        .sp_menu_inner {
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+
+        .sp_contact_icon {
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;  
+        
+            li {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 16px 0 16px;
+            }
+            .github {
+                @include fontsize($inner_title_size * 2.3);
+                line-height: $inner_title_size * 0.4rem;
+            }
+            .mail {
+                @include fontsize($inner_title_size * 2);
+                line-height: $inner_title_size * 0.4rem;
+            }
         }
     }
     @media (#{$pc}) {
@@ -1143,9 +1178,7 @@ footer {
 
         .owl-stage {
             display: flex;
-            align-items: center;
-            transform: 0;
-            transition: transform 0.4s; 
+            align-items: center; 
         }
         .center {
             li div {

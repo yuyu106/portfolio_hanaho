@@ -3,16 +3,14 @@ $(function(){
     var scrollpos;
    
     $('#sp_menu_buttun').on('click', function(){
+        $(this).toggleClass('active');
       if(state == false) {
         state = true;
         $(".sp_menu_toggle").slideToggle();
         $(".back2").delay(20).slideToggle();
         $(".back3").delay(40).slideToggle();
         $(".back4").delay(60).slideToggle()
-        $(".sp_menu_inner").delay(60).slideToggle('normal', function() {
-            if ($(this).is(':visible'))
-                $(this).css('display','flex');
-        });        
+        $(".sp_menu_inner").delay(60).slideToggle();        
         $(".back5").delay(80).slideToggle();
         $(".back6").delay(100).slideToggle();
         $(".back7").delay(120).slideToggle("normal", ()=> {
@@ -28,10 +26,7 @@ $(function(){
         $(".back6").delay(20).slideToggle();
         $(".back5").delay(40).slideToggle();
         $(".back4").delay(60).slideToggle();
-        $(".sp_menu_inner").delay(60).slideToggle('normal', function() {
-            if ($(this).is(':visible'))
-                $(this).css('display','flex');
-        }); 
+        $(".sp_menu_inner").delay(60).slideToggle(); 
         $(".back3").delay(80).slideToggle();
         $(".back2").delay(100).slideToggle();
         $(".sp_menu_toggle").delay(120).slideToggle();

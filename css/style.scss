@@ -373,9 +373,50 @@ header {
     #sp_menu_buttun {
         position: relative;
         z-index: 200;
-        width: 40px;
+        width: 56px;
         height: 40px;
-        background-color: #444;
+        cursor: pointer;
+        display: inline-block;
+        transition: all .5s;
+        box-sizing: border-box;
+        span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #444;
+            display: inline-block;
+            transition: all .5s;
+            box-sizing: border-box;
+        }
+        span:nth-of-type(1) {
+            top: 0;
+        }
+        span:nth-of-type(2) {
+            top: 18px;
+        }
+        span:nth-of-type(3) {
+            bottom: 0;
+        }
+
+        &.active {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+
+        &.active span:nth-of-type(1) {
+            -webkit-transform: translateY(18px) rotate(-45deg);
+            transform: translateY(18px) rotate(-45deg);
+          }
+        &.active span:nth-of-type(2) {
+            -webkit-transform: translateY(0) rotate(45deg);
+            transform: translateY(0) rotate(45deg);
+          }
+        &.active span:nth-of-type(3) {
+            opacity: 0;
+          }
+
     }
 
     .sp_menu_toggle {
@@ -425,34 +466,35 @@ header {
             list-style: none;
             display: block;
             p {
-                text-align: center;
                 @include fontsize($menu_font_size);
             }
         }
-
         .sp_menu_inner {
+            display: none;
+        }
+
+        .sp_menu_inner div{
             height: 100%;
             width: 100%;
-            align-items: center;
+            margin-top: 120px;
             justify-content: center;
-            display: none;
+            display: flex;
         }
 
         .sp_contact_icon {
             margin: 0;
             list-style: none;
             display: flex;
-            justify-content: space-evenly;
             align-items: center;  
         
             li {
                 display: inline-block;
                 vertical-align: middle;
-                margin: 0 16px 0 16px;
             }
             .github {
                 @include fontsize($inner_title_size * 2.3);
                 line-height: $inner_title_size * 0.4rem;
+                margin-right: 24px;
             }
             .mail {
                 @include fontsize($inner_title_size * 2);
@@ -827,7 +869,7 @@ header {
 
 /* skills -----------------------------------------------------*/
 .skills {
-    margin-top: 64px;
+    margin-top: 120px;
     @media (#{$pc}) {
         margin-top: 160px;
     }
@@ -895,7 +937,7 @@ header {
 
 /* works -----------------------------------------------------*/
 .top_works {
-    margin-top: 64px;
+    margin-top: 120px;
     @media (#{$pc}) {
         margin-top: 160px;
     }
@@ -1021,7 +1063,7 @@ header {
 /* contact ----------------------------------------------------*/
 .contact {
     text-align: center;
-    margin-top: 64px;
+    margin-top: 120px;
     @media (#{$pc}) {
         margin-top: 160px;
     }
@@ -1054,7 +1096,7 @@ header {
 
 /* fotter -----------------------------------------------------*/
 footer {
-    margin-top: 80px;
+    margin-top: 120px;
     @media (#{$pc}) {
         margin-top: 160px;
     }
@@ -1090,7 +1132,7 @@ footer {
 }
 
 .career {
-    margin-top: 64px;
+    margin-top: 120px;
     @media (#{$pc}) {
         margin-top: 160px;
     }
@@ -1148,7 +1190,7 @@ footer {
 
 .hobbys {
     text-align: center;
-    margin-top: 64px;
+    margin-top: 120px;
     @media (#{$pc}) {
         margin-top: 160px;
     }
@@ -1261,7 +1303,7 @@ footer {
 }
 
 .work {
-    margin-bottom: 24px;
+    margin-bottom: 64px;
     
     h4 {
         @include fontsize($inner_title_size);

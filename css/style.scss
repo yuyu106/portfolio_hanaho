@@ -316,9 +316,10 @@ header {
 }
 .name-header {
     display: block;
+    width: 64px;
     @include fontsize($menu_font_size);
-    @include fontsize(12);
-    line-height: 12px;
+    @include fontsize(16);
+    line-height: 16px;
     @media (#{$pc}) {
         @include fontsize(24);
         line-height: 24px;
@@ -328,8 +329,8 @@ header {
     span {
         width: 100%;
         display: block;
-        @include fontsize(9);
-        line-height: 12px;
+        @include fontsize(12);
+        line-height: 16px;
 
         @media (#{$pc}) {
             @include fontsize(18);
@@ -373,8 +374,8 @@ header {
     #sp_menu_buttun {
         position: relative;
         z-index: 200;
-        width: 56px;
-        height: 40px;
+        width: 36px;
+        height: 24px;
         cursor: pointer;
         display: inline-block;
         transition: all .5s;
@@ -394,7 +395,7 @@ header {
             top: 0;
         }
         span:nth-of-type(2) {
-            top: 18px;
+            top: 10px;
         }
         span:nth-of-type(3) {
             bottom: 0;
@@ -406,8 +407,8 @@ header {
         }
 
         &.active span:nth-of-type(1) {
-            -webkit-transform: translateY(18px) rotate(-45deg);
-            transform: translateY(18px) rotate(-45deg);
+            -webkit-transform: translateY(10px) rotate(-45deg);
+            transform: translateY(10px) rotate(-45deg);
           }
         &.active span:nth-of-type(2) {
             -webkit-transform: translateY(0) rotate(45deg);
@@ -899,23 +900,24 @@ header {
             }
         }
     }
-    .skills_icons {
-        @media (#{$pc}) {
-            margin-top: 40px;
-        }
+}
+
+.skills_icons {
+    @media (#{$pc}) {
+        margin-top: 40px;
+    }
+    
+    ul {
+        list-style : none;
         
-        ul {
-            list-style : none;
-            
-            li {
-                display: inline-block;
-                padding: 8px 16px 8px 16px;
-                background-color: $blue;
-                color: #fff;
-                margin: 1px;
-                @media (#{$sp}) {
-                    margin-bottom: 4px;
-                }
+        li {
+            display: inline-block;
+            padding: 8px 16px 8px 16px;
+            background-color: $blue;
+            color: #fff;
+            margin: 1px;
+            @media (#{$sp}) {
+                margin-bottom: 4px;
             }
         }
     }
@@ -1372,7 +1374,9 @@ footer {
 }
 
 .selected_description {
-    display: inline-block;
+    display: flex;
+    height: 100%;
+    align-items: center;
     @media (#{$pc}) {
         width: 48%;
         position: absolute;
@@ -1380,10 +1384,33 @@ footer {
         right: 0;
         @include fontsize(16);
     }
+
+    p {
+        @media (#{$sp}) {
+            margin-bottom: 16px;
+        }
+    }
 }
 
 .description {
     display: none;
+}
+
+.selected_description p, .description p {
+    @media (#{$pc}) {
+        line-height: 2.8rem;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    span {
+        display: block;
+        span {
+            display: inline-block;
+            width: 80px;
+        }
+    }
 }
 
 .work {

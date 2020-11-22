@@ -1,3 +1,4 @@
+/*
 $(function(){
     var state = false;
     var scrollpos;
@@ -178,3 +179,5 @@ $(function() {
       $(this).parents(".owl-item").addClass("center");
     });
   });
+
+  */
